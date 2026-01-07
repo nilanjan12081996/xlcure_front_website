@@ -4,6 +4,7 @@ import "./globals.css";
 import "../assets/css/custom.css";
 import Header from "./ui/header";
 import Footer from "./ui/footer";
+import Providers from "./Reducer/Providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,9 +44,11 @@ export default function RootLayout({ children }) {
         className={`${helveticaNeue.variable} ${geistMono.variable} antialiased`}
       >
         <main>
+          <Providers>
           <Header />
           {children}
           <Footer />
+           </Providers>
         </main>
       </body>
     </html>

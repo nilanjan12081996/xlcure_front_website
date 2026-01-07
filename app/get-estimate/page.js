@@ -26,10 +26,13 @@ import { BiSolidUser } from "react-icons/bi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { BiSolidPhone } from "react-icons/bi";
 import { BiLogoGmail } from "react-icons/bi";
+import GetEstimateForm from './GetEstimateForm';
+import { ToastContainer } from 'react-toastify';
 
 const page = () => {
   return (
     <div>
+      <ToastContainer/>
         {/* Banner section start here */}
         <div className='banner_area py-0 lg:p-0'>
             <div className="inner_banner_area relative lg:mx-[30px] mx-4 my-5 lg:my-0">
@@ -53,7 +56,7 @@ const page = () => {
                   Get <span className="text-[#ff0016]">Estimate </span>   
                 </h2>
               </div>
-              <div className="lg:flex gap-12">
+              {/* <div className="lg:flex gap-12">
                   <div className="lg:w-7/12">
                     <div className="flex gap-4 form_area mb-4">
                       <div className="w-6/12">
@@ -112,7 +115,8 @@ const page = () => {
                   <div className="lg:w-5/12 mt-4 lg:mt-0">
                     <Image src={contact_img} alt='contact_img' />
                   </div>
-              </div>
+              </div> */}
+              <GetEstimateForm/>
           </div>
        </div>
        {/* CONTACT section ends here */}
