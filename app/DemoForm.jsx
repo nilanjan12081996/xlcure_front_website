@@ -168,6 +168,7 @@ const DemoForm = () => {
   const onSubmit = (data) => {
     dispatch(demoRequest(data)).then((res)=>{
         if(res?.payload?.status_code===200){
+          reset()
             toast.success(res?.payload?.message)
         }
     })
