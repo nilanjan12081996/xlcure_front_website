@@ -43,7 +43,7 @@ const Footer = () => {
                      <li><Link className='text-[14px] leading-[28px] text-[#E9E9E9] hover:text-[#0047ff] pb-2 block' href="/about-us" passHref>About Us</Link></li>
                      <li><Link className='text-[14px] leading-[28px] text-[#E9E9E9] hover:text-[#0047ff] pb-2 block' href="/contact-us" passHref>Contact Us</Link></li>
                      <li><Link className='text-[14px] leading-[28px] text-[#E9E9E9] hover:text-[#0047ff] pb-2 block' href="/privacy-policy" passHref>Privacy Policy</Link></li>
-                     <li><Link className='text-[14px] leading-[28px] text-[#E9E9E9] hover:text-[#0047ff] pb-2 block' href="/" passHref>Terms & Conditions</Link></li>
+                     <li><Link className='text-[14px] leading-[28px] text-[#E9E9E9] hover:text-[#0047ff] pb-2 block' href="/terms" passHref>Terms & Conditions</Link></li>
                   </ul>
                </div>
                <div className='lg:w-4/12 mb-6 lg:mb-0'>
