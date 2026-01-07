@@ -165,7 +165,7 @@ body {
   background: #ffffff;
   resize: none;
 }
-.form_area button {
+.form_area.submit_btn button {
   background: #00b049;
   border-radius: 100px;
   width: 100%;
