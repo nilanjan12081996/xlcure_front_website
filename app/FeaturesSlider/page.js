@@ -343,7 +343,7 @@ const FeaturesSlider = () => {
                     </div>
                   </div>
                   <div className="px-5 pb-5">
-                    <h3 className="font-bold text-black mt-3 text-[30px] leading-[36px] border-b border-[#E6E6E6] pb-4 pr-0">Radiology Management</h3>
+                    <h3 className="font-bold text-black mt-3 text-[30px] leading-[36px] border-b border-[#E6E6E6] pb-4 pr-0 feature_title_height">Radiology Management</h3>
                     <p className="text-[15px] text-[#464646] mt-3">
                       Simplify radiology operations with efficient scheduling, report management, and faster access to imaging results for clinicians and patients.
                     </p>
@@ -364,7 +364,7 @@ const FeaturesSlider = () => {
                     </div>
                   </div>
                   <div className="px-5 pb-5">
-                    <h3 className="font-bold text-black mt-3 text-[30px] leading-[36px] border-b border-[#E6E6E6] pb-4 pr-0">Dicom Viewer Integrated with PACS</h3>
+                    <h3 className="font-bold text-black mt-3 text-[30px] leading-[36px] border-b border-[#E6E6E6] pb-4 pr-0 feature_title_height">Dicom Viewer Integrated with PACS</h3>
                     <p className="text-[15px] text-[#464646] mt-3">
                       Access, view, and analyze medical images instantly with a built-in DICOM viewer seamlessly integrated with PACS for faster diagnosis and improved collaboration.
                     </p>
@@ -385,7 +385,7 @@ const FeaturesSlider = () => {
                     </div>
                   </div>
                   <div className="px-5 pb-5">
-                    <h3 className="font-bold text-black mt-3 text-[30px] leading-[36px] border-b border-[#E6E6E6] pb-4 pr-0">Ambulance Booking & Tracking</h3>
+                    <h3 className="font-bold text-black mt-3 text-[30px] leading-[36px] border-b border-[#E6E6E6] pb-4 pr-0 feature_title_height">Ambulance Booking & Tracking</h3>
                     <p className="text-[15px] text-[#464646] mt-3">
                       Book ambulances quickly and track them in real time, ensuring faster response, better coordination, and timely patient care.
                     </p>
@@ -406,7 +406,7 @@ const FeaturesSlider = () => {
                     </div>
                   </div>
                   <div className="px-5 pb-5">
-                    <h3 className="font-bold text-black mt-3 text-[30px] leading-[36px] border-b border-[#E6E6E6] pb-4 pr-0">Blood Bank</h3>
+                    <h3 className="font-bold text-black mt-3 text-[30px] leading-[36px] border-b border-[#E6E6E6] pb-4 pr-0 feature_title_height">Blood Bank</h3>
                     <p className="text-[15px] text-[#464646] mt-3">
                       Maintain accurate records of blood units, inventory status, and availability to ensure timely access and safe blood management across the facility.
                     </p>
@@ -427,7 +427,7 @@ const FeaturesSlider = () => {
                     </div>
                   </div>
                   <div className="px-5 pb-5">
-                    <h3 className="font-bold text-black mt-3 text-[30px] leading-[36px] border-b border-[#E6E6E6] pb-4 pr-0">Blood Collection, Extraction & Inventory</h3>
+                    <h3 className="font-bold text-black mt-3 text-[30px] leading-[36px] border-b border-[#E6E6E6] pb-4 pr-0 feature_title_height">Blood Collection, Extraction & Inventory</h3>
                     <p className="text-[15px] text-[#464646] mt-3">
                       Track blood collection, testing, and inventory in real time to ensure availability, safety, and efficient blood bank operations.
                     </p>
@@ -448,7 +448,7 @@ const FeaturesSlider = () => {
                     </div>
                   </div>
                   <div className="px-5 pb-5">
-                    <h3 className="font-bold text-black mt-3 text-[30px] leading-[36px] border-b border-[#E6E6E6] pb-4 pr-0">Packages, Procedures</h3>
+                    <h3 className="font-bold text-black mt-3 text-[30px] leading-[36px] border-b border-[#E6E6E6] pb-4 pr-0 feature_title_height">Packages, Procedures</h3>
                     <p className="text-[15px] text-[#464646] mt-3">
                       Easily create, manage, and apply treatment packages and procedures with transparent pricing and accurate billing.
                     </p>
@@ -469,7 +469,7 @@ const FeaturesSlider = () => {
                     </div>
                   </div>
                   <div className="px-5 pb-5">
-                    <h3 className="font-bold text-black mt-3 text-[30px] leading-[36px] border-b border-[#E6E6E6] pb-4 pr-0">TPA Management</h3>
+                    <h3 className="font-bold text-black mt-3 text-[30px] leading-[36px] border-b border-[#E6E6E6] pb-4 pr-0 feature_title_height">TPA Management</h3>
                     <p className="text-[15px] text-[#464646] mt-3">
                       Simplify third-party administrator processes with smooth insurance coordination, faster approvals, and accurate claim tracking.
                     </p>
