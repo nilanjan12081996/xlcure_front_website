@@ -180,7 +180,7 @@ const DemoForm = () => {
         <div className="lg:w-7/12">
 
           {/* Name & Email */}
-          <div className="flex gap-4 mb-4">
+          <div className="flex gap-4 form_area mb-4">
             <div className="w-6/12">
               <Label>Name *</Label>
               <TextInput
@@ -208,7 +208,7 @@ const DemoForm = () => {
           </div>
 
           {/* Phone & Organization */}
-          <div className="flex gap-4 mb-4">
+          <div className="flex gap-4 form_area mb-4">
             <div className="w-6/12">
               <Label>Phone *</Label>
               <TextInput
@@ -227,7 +227,7 @@ const DemoForm = () => {
           </div>
 
           {/* Job Level & Country */}
-          <div className="flex gap-4 mb-4">
+          <div className="flex gap-4 form_area mb-4">
             <div className="w-6/12">
               <Label>Job Level *</Label>
               <TextInput
@@ -253,7 +253,7 @@ const DemoForm = () => {
           </div>
 
           {/* Website & Business */}
-          <div className="flex gap-4 mb-4">
+          <div className="flex gap-4 form_area mb-4">
             <div className="w-6/12">
               <Label>Website *</Label>
               <TextInput
@@ -272,7 +272,7 @@ const DemoForm = () => {
           </div>
 
           {/* Message & Date */}
-          <div className="lg:flex gap-4 mb-4">
+          <div className="lg:flex gap-4 form_area mb-4">
             <div className="lg:w-6/12">
               <Label>Message *</Label>
               <Textarea
