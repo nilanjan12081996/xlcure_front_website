@@ -26,11 +26,14 @@ import { BiSolidUser } from "react-icons/bi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { BiSolidPhone } from "react-icons/bi";
 import { BiLogoGmail } from "react-icons/bi";
+import ContactUsForm from './ContactUsForm';
+import { ToastContainer } from 'react-toastify';
 
 const page = () => {
   return (
     <div>
         {/* Banner section start here */}
+        <ToastContainer/>
         <div className='banner_area py-0 lg:p-0'>
             <div className="inner_banner_area relative lg:mx-[30px] mx-4 my-5 lg:my-0">
                 <Image src={contact_banner} alt='contact_banner' className="" />
@@ -49,114 +52,10 @@ const page = () => {
         <div className="home_about_section lg:my-[70px] my-[40px]">
             <div className="max-w-6xl mx-auto lg:py-4 px-4 lg:px-0">
                 
-                <div className="lg:flex gap-12">
-                    <div className="lg:w-7/12 mb-8 lg:mb-0">
-                        <div className="mb-6">
-                            <h2 className="text-[19px] leading-[25px] lg:text-[40px] lg:leading-[50px] pb-4 text-black font-bold">
-                               Get in touch <span className="text-[#ff0016]">with us</span>   
-                            </h2>
-                            <p className="text-[#464646] font-medium text-sm lg:text-base lg:pb-0 pb-0 ${helveticaNeue.className}">
-                               Start your journey with xcelcuré™ and upgrade your hospital, clinic, or laboratory to a smarter, unified digital ecosystem.
-                            </p>
-                        </div>
-                        <div className="flex gap-4 form_area mb-4">
-                            <div className="w-6/12">
-                                <div className="mb-0 block">
-                                <Label htmlFor="base">Name <span>*</span></Label>
-                                </div>
-                                <TextInput id="base" type="text" sizing="md" placeholder="Enter Name" />
-                            </div>
-                            <div className="w-6/12">
-                                <div className="mb-0 block">
-                                <Label htmlFor="base">Email Address <span>*</span></Label>
-                                </div>
-                                <TextInput id="base" type="email" sizing="md" placeholder="Enter Email" />
-                            </div>
-                        </div>
-                        <div className="flex gap-4 form_area mb-4">
-                            <div className="w-6/12">
-                                <div className="mb-0 block">
-                                <Label htmlFor="base">Phone <span>*</span></Label>
-                                </div>
-                                <TextInput id="base" type="text" sizing="md" />
-                            </div>
-                            <div className="w-6/12">
-                                <div className="mb-0 block">
-                                <Label htmlFor="base">Organization Name <span>*</span></Label>
-                                </div>
-                                <TextInput id="base" type="text" sizing="md" />
-                            </div>
-                        </div>
-                        <div className="flex gap-4 form_area mb-4">
-                            <div className="w-full">
-                                <div className="mb-0 block">
-                                <Label htmlFor="base">Message <span>*</span></Label>
-                                </div>
-                                <Textarea id="comment" placeholder="Enter Message" required rows={5} />
-                            </div>
-                        </div>
-                        <div className="mb-4">
-                            <div className="mt-2">
-                               <Image src={captcha_img} alt='captcha_img' className="w-5/12" />
-                            </div>
-                        </div>
-                        <div className="form_area">
-                           <Button type="submit">Contact Us</Button>
-                        </div>
-                    </div>
+               
+                    <ContactUsForm/>
                     
-                    <div className="lg:w-5/12 bg-[#1955EF] rounded-[10px] shadow-xl p-5 lg:p-10 mb-6 lg:mb-0">
-                    <div className='mb-10 pb-8 border-b border-[#5081FF]'>
-                        <h3 className='text-[#FFFFFF] text-[19px] leading-[25px] lg:text-[24px] lg:leading-[26px] font-semibold pb-2 lg:pb-4'>Contact Info</h3>
-                        <p className='text-[#FFFFFF] text-sm lg:text-[14px] leading-[20px]'>
-                            Have questions about digitizing your healthcare facility? Reach out to learn how xcelcuré™ can streamline operations, enhance patient care, and simplify daily workflows.
-                        </p>
-                    </div>
-                    <div className='mb-4 pb-5 flex items-center'>
-                        <div className='w-3/12'>
-                                <div className='w-[63px] h-[63px] bg-[#FFFFFF] rounded-full flex items-center justify-center'>
-                                <FaMapMarkerAlt className='text-[#1955EF] text-3xl' />
-                            </div>
-                        </div>
-                        <div className='w-9/12'>
-                            <div className='mb-2'>
-                                <p className='text-[#ffffff] text-[18px] lg:text-[18px] leading-[26px] font-semibold pb-0'>Our Location</p>
-                            </div>
-                            <div className='text-[12px] lg:text-[13px] leading-[16px] font-medium text-[#ffffff] pl-0'>
-                                Module-115, SDF Building, GP Block, Sector V, Bidhannagar, Kolkata, West Bengal - 700091
-                            </div>
-                        </div>
-                    </div>
-                    <div className='mb-4 pb-5 flex items-center'>
-                        <div className='w-3/12'>
-                                <div className='w-[63px] h-[63px] bg-[#FFFFFF] rounded-full flex items-center justify-center'>
-                                <BiSolidPhone className='text-[#1955EF] text-3xl' />
-                            </div>
-                        </div>
-                        <div className='w-9/12'>
-                            <div className='mb-2'>
-                                <p className='text-[#ffffff] text-[18px] lg:text-[18px] leading-[26px] font-semibold pb-0'>Phone Number</p>
-                            </div>
-                            <div className='text-[12px] lg:text-[13px] leading-[16px] font-medium text-[#ffffff] pl-0'>(+91) 9836149149</div>
-                        </div>
-                    </div>
-                    <div className='mb-4 pb-5 flex items-center'>
-                        <div className='w-3/12'>
-                                <div className='w-[63px] h-[63px] bg-[#FFFFFF] rounded-full flex items-center justify-center'>
-                                <BiLogoGmail className='text-[#1955EF] text-3xl' />
-                            </div>
-                        </div>
-                        <div className='w-9/12'>
-                            <div className='mb-2'>
-                                <p className='text-[#ffffff] text-[18px] lg:text-[18px] leading-[26px] font-semibold pb-0'>Email Id</p>
-                            </div>
-                            <div className='text-[12px] lg:text-[13px] leading-[16px] font-medium text-[#ffffff] pl-0'>admin@xcelcure.com</div>
-                            <div className='text-[12px] lg:text-[13px] leading-[16px] font-medium text-[#ffffff] pl-0'>icare@xcelcure.com</div>
-                        </div>
-                    </div>
-                    </div>
-                    
-                </div>
+                  
             </div>
         </div>
         {/* CONTACT section ends here */}
