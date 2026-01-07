@@ -391,14 +391,14 @@ export default function Home() {
 
 
        {/* Video Modal start here */}
-       <Modal size="7xl" show={openVideoModal} onClose={() => setOpenVideoModal(false)}>
+       {/* <Modal size="7xl" show={openVideoModal} onClose={() => setOpenVideoModal(false)}>
         <ModalHeader className="border-0 pb-0 absolute right-[-8px] top-[-8px]">&nbsp;</ModalHeader>
         <ModalBody className="bg-[#dbdbdb] rounded-[10px] pt-14 px-2 pb-2">
           <div className="space-y-6 video_section">
              <iframe src="https://www.youtube.com/embed/kXzvluUbWxY?si=OBO66naiH0paiPqT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </ModalBody>
-      </Modal>
+      </Modal> */}
       {/* Video Modal ends here */}
 
 
