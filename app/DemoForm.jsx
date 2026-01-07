@@ -168,6 +168,7 @@ const DemoForm = () => {
   const onSubmit = (data) => {
     dispatch(demoRequest(data)).then((res)=>{
         if(res?.payload?.status_code===200){
+          reset()
             toast.success(res?.payload?.message)
         }
     })
@@ -291,20 +292,25 @@ const DemoForm = () => {
                   })
                 }
               /> */}
-              <Controller
-                name="demo_date"
-                control={control}
-                rules={{ required: "Date is required" }}
-                render={({ field }) => (
-                    <Datepicker
-                    {...field}
-                    onSelectedDateChanged={(date) => field.onChange(date)}
-                    />
-                )}
-                />
-                {errors.demo_date && (
-                <p className="text-red-500 text-xs">{errors.demo_date.message}</p>
-                )}
+        <Controller
+          name="demo_date"
+          control={control}
+          rules={{ required: "Date is required" }}
+          render={({ field }) => (
+            <Datepicker
+              onChange={(date) => {
+                const formattedDate = date.toLocaleDateString("en-CA"); // YYYY-MM-DD
+                field.onChange(formattedDate);
+              }}
+            />
+          )}
+        />
+
+        {errors.demo_date && (
+          <p className="text-red-500 text-xs">{errors.demo_date.message}</p>
+        )}
+
+
               <div className="mt-2">
                 <Image src={captcha_img} alt="captcha" className="w-9/12" />
               </div>
