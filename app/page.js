@@ -31,6 +31,8 @@ import localFont from "next/font/local";
 import ProductsSlider from "./productsSlider/page";
 import FeaturesSlider from "./FeaturesSlider/page";
 import BannerSlider from "./BannerSlider/page";
+import DemoForm from "./DemoForm";
+import { ToastContainer } from "react-toastify";
 const helveticaNeue = localFont({
   src: [
     {
@@ -49,6 +51,7 @@ export default function Home() {
 
   return (
     <div className={`${helveticaNeue.variable} antialiased home_wrapper_arera`}>
+      <ToastContainer/>
        {/* Home banner section start here */}
        <div className="home_banner_area pt-4 lg:pt-0">
           <div className="max-w-6xl mx-auto lg:py-4 px-4 lg:px-0">
@@ -296,7 +299,7 @@ export default function Home() {
                   Request a <span className="text-[#ff0016]">Demo</span>   
                 </h2>
               </div>
-              <div className="lg:flex gap-12">
+              {/* <div className="lg:flex gap-12">
                   <div className="lg:w-7/12">
                     <div className="flex gap-4 form_area mb-4">
                       <div className="w-6/12">
@@ -378,7 +381,8 @@ export default function Home() {
                   <div className="lg:w-5/12 mt-4 lg:mt-0">
                     <Image src={contact_img} alt='contact_img' />
                   </div>
-              </div>
+              </div> */}
+              <DemoForm/>
           </div>
        </div>
        {/* CONTACT section ends here */}
