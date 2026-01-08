@@ -22,6 +22,7 @@ import { BiSolidCustomize } from "react-icons/bi";
 import { BiSolidLockAlt } from "react-icons/bi";
 import { BiSolidBuildingHouse } from "react-icons/bi";
 import { BiSolidUser } from "react-icons/bi";
+import DemoForm from '../DemoForm';
 
 const page = () => {
   return (
@@ -201,7 +202,7 @@ const page = () => {
                         Request a <span className="text-[#ff0016]">Demo</span>   
                     </h2>
                     </div>
-                    <div className="lg:flex gap-12">
+                    {/* <div className="lg:flex gap-12">
                         <div className="lg:w-7/12">
                         <div className="flex gap-4 form_area mb-4">
                             <div className="w-6/12">
@@ -283,7 +284,8 @@ const page = () => {
                         <div className="lg:w-5/12 mt-4 lg:mt-0">
                         <Image src={contact_img} alt='contact_img' />
                         </div>
-                    </div>
+                    </div> */}
+                    <DemoForm/>
                 </div>
             </div>
         {/* CONTACT section ends here */}

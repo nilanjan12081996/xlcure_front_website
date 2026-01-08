@@ -129,7 +129,7 @@ const GetEstimateForm=()=>{
             }
             </div>
         </div>
-        <div className="form_area">
+        <div className="form_area submit_btn">
             <Button
 
             type="submit"

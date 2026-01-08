@@ -51,9 +51,10 @@ export default function Home() {
 
   return (
     <div className={`${helveticaNeue.variable} antialiased home_wrapper_arera`}>
-      <ToastContainer/>
+   
        {/* Home banner section start here */}
        <div className="home_banner_area pt-4 lg:pt-0">
+          
           <div className="max-w-6xl mx-auto lg:py-4 px-4 lg:px-0">
               <div className="lg:flex gap-20">
                  <div className="lg:w-6/12 pr-0 mb-6 flex justify-center items-center">

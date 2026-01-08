@@ -89,7 +89,7 @@ const ContactUsForm=()=>{
             <Image src={captcha_img} alt='captcha_img' className="w-5/12" />
             </div>
         </div>
-        <div className="form_area">
+        <div className="form_area submit_btn">
         <Button 
         disabled={loading}
         className={loading ? "opacity-60 cursor-not-allowed" : ""}

@@ -285,7 +285,7 @@ const PartnerForm = () => {
           </div>
 
           {/* Submit */}
-             <div className="form_area">
+             <div className="form_area submit_btn">
          <Button type="submit" disabled={loading}  className={loading ? "opacity-60 cursor-not-allowed" : ""}>
            
            {loading?"Waiting":"Request Partner"} 

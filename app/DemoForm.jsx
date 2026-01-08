@@ -145,7 +145,7 @@ import captcha_img from "../assets/imagesource/captcha_img.png";
 
 import { getCountry } from "./Reducer/PartnerSlice";
 import { demoRequest } from "./Reducer/DemoSlice";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 
 const DemoForm = () => {
@@ -167,9 +167,12 @@ const DemoForm = () => {
 
   const onSubmit = (data) => {
     dispatch(demoRequest(data)).then((res)=>{
+      console.log(res,"res");
+      
         if(res?.payload?.status_code===200){
+             toast.success(res?.payload?.message)
           reset()
-            toast.success(res?.payload?.message)
+         
         }
     })
     
@@ -177,6 +180,7 @@ const DemoForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+       <ToastContainer/>
       <div className="lg:flex gap-12">
         <div className="lg:w-7/12">
 
