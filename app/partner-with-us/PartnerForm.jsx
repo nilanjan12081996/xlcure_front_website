@@ -18,7 +18,7 @@
 //             handleSubmit,
 //             formState: { errors },
 //       } = useForm();
-      
+
 // console.log("countryList",countryList);
 
 //     return(
@@ -120,9 +120,7 @@
 // }
 // export default PartnerForm
 
-
-
-'use client';
+"use client";
 
 import { Button, Label, Select, Textarea, TextInput } from "flowbite-react";
 import contact_img from "../../assets/imagesource/contact_img.png";
@@ -133,7 +131,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getCountry, partnerWithUs } from "../Reducer/PartnerSlice";
 import { toast } from "react-toastify";
-
 
 const PartnerForm = () => {
   const dispatch = useDispatch();
@@ -151,18 +148,17 @@ const PartnerForm = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    dispatch(partnerWithUs(data)).then((res)=>{
-        if(res?.payload?.status_code===200){
-            toast.success(res?.payload?.message)
-        }
-    })
+    dispatch(partnerWithUs(data)).then((res) => {
+      if (res?.payload?.status_code === 200) {
+        toast.success(res?.payload?.message);
+      }
+    });
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="lg:flex gap-12">
+      <div className="lg:flex form_area gap-12">
         <div className="lg:w-7/12">
-
           {/* Name + Email */}
           <div className="flex gap-4 mb-4">
             <div className="w-6/12">
@@ -170,9 +166,12 @@ const PartnerForm = () => {
               <TextInput
                 placeholder="Enter Name"
                 {...register("name", { required: "Name is required" })}
-               
               />
-              {errors.name && <span className="text-red-500 text-xs">{errors.name.message}</span>}
+              {errors.name && (
+                <span className="text-red-500 text-xs">
+                  {errors.name.message}
+                </span>
+              )}
             </div>
 
             <div className="w-6/12">
@@ -184,9 +183,12 @@ const PartnerForm = () => {
                   required: "Email is required",
                   pattern: { value: /^\S+@\S+$/i, message: "Invalid email" },
                 })}
-              
               />
-              {errors.email && <span className="text-red-500 text-xs">{errors.email.message}</span>}
+              {errors.email && (
+                <span className="text-red-500 text-xs">
+                  {errors.email.message}
+                </span>
+              )}
             </div>
           </div>
 
@@ -199,9 +201,12 @@ const PartnerForm = () => {
                   required: "Phone is required",
                   minLength: { value: 10, message: "Invalid phone number" },
                 })}
-              
               />
-              {errors.phone && <span className="text-red-500 text-xs">{errors.phone.message}</span>}
+              {errors.phone && (
+                <span className="text-red-500 text-xs">
+                  {errors.phone.message}
+                </span>
+              )}
             </div>
 
             <div className="w-6/12">
@@ -210,10 +215,11 @@ const PartnerForm = () => {
                 {...register("organization_name", {
                   required: "Organization name is required",
                 })}
-                
               />
               {errors.organization_name && (
-                <span className="text-red-500 text-xs">{errors.organization_name.message}</span>
+                <span className="text-red-500 text-xs">
+                  {errors.organization_name.message}
+                </span>
               )}
             </div>
           </div>
@@ -223,17 +229,21 @@ const PartnerForm = () => {
             <div className="w-6/12">
               <Label>Job Level *</Label>
               <TextInput
-                {...register("job_level", { required: "Job level is required" })}
-                
+                {...register("job_level", {
+                  required: "Job level is required",
+                })}
               />
-              {errors.job_level && <span className="text-red-500 text-xs">{errors.job_level.message}</span>}
+              {errors.job_level && (
+                <span className="text-red-500 text-xs">
+                  {errors.job_level.message}
+                </span>
+              )}
             </div>
 
             <div className="w-6/12">
               <Label>Country *</Label>
               <Select
                 {...register("country_id", { required: "Country is required" })}
-                
               >
                 <option value="">Select Country</option>
                 {countryList?.data?.map((country) => (
@@ -242,7 +252,11 @@ const PartnerForm = () => {
                   </option>
                 ))}
               </Select>
-              {errors.country && <span className="text-red-500 text-xs">{errors.country.message}</span>}
+              {errors.country && (
+                <span className="text-red-500 text-xs">
+                  {errors.country.message}
+                </span>
+              )}
             </div>
           </div>
 
@@ -252,18 +266,24 @@ const PartnerForm = () => {
               <Label>Website *</Label>
               <TextInput
                 {...register("website", { required: "Website is required" })}
-               
               />
-              {errors.website && <span className="text-red-500 text-xs">{errors.website.message}</span>}
+              {errors.website && (
+                <span className="text-red-500 text-xs">
+                  {errors.website.message}
+                </span>
+              )}
             </div>
 
             <div className="w-6/12">
               <Label>Business *</Label>
               <TextInput
                 {...register("business", { required: "Business is required" })}
-              
               />
-              {errors.business && <span className="text-red-500 text-xs">{errors.business.message}</span>}
+              {errors.business && (
+                <span className="text-red-500 text-xs">
+                  {errors.business.message}
+                </span>
+              )}
             </div>
           </div>
 
@@ -274,9 +294,12 @@ const PartnerForm = () => {
               <Textarea
                 rows={5}
                 {...register("message", { required: "Message is required" })}
-               
               />
-              {errors.message && <span className="text-red-500 text-xs">{errors.message.message}</span>}
+              {errors.message && (
+                <span className="text-red-500 text-xs">
+                  {errors.message.message}
+                </span>
+              )}
             </div>
 
             <div className="w-6/12 mt-8">
@@ -285,13 +308,15 @@ const PartnerForm = () => {
           </div>
 
           {/* Submit */}
-             <div className="form_area submit_btn">
-         <Button type="submit" disabled={loading}  className={loading ? "opacity-60 cursor-not-allowed" : ""}>
-           
-           {loading?"Waiting":"Request Partner"} 
-          </Button>
-             </div>
-        
+          <div className="form_area submit_btn">
+            <Button
+              type="submit"
+              disabled={loading}
+              className={loading ? "opacity-60 cursor-not-allowed" : ""}
+            >
+              {loading ? "Waiting" : "Request Partner"}
+            </Button>
+          </div>
         </div>
 
         <div className="lg:w-5/12 mt-4">

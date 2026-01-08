@@ -70,7 +70,7 @@ const page = () => {
                             <p className="text-[#69697B] font-medium text-sm lg:text-base lg:pb-5 pb-5 ${helveticaNeue.className}">With its clean interface, fast billing workflow, 
                                 and professional GST-compliant invoices, <strong>ProfitPlus</strong> helps you simplify your 
                                 entire business operations—right from sales and purchases to stock tracking, reporting, and customer management.</p>
-                            <Link className="inline-flex items-center gap-10 text-black bg-[#ffffff] font-medium text-xs lg:text-base rounded-[35px] px-3 py-1 pr-1 lg:py-1 pl-4 border-2 border-[#f2f2f2] hover:bg-white hover:text-[#1955ef]" href="/" passHref>
+                            <Link className="inline-flex items-center gap-10 text-black bg-[#ffffff] font-medium text-xs lg:text-base rounded-[35px] px-3 py-1 pr-1 lg:py-1 pl-4 border-2 border-[#f2f2f2] hover:bg-white hover:text-[#1955ef]" href="/#request_a_demo" passHref>
                                 Schedule a Demo
                                 <div className="bg-[#1955EF] w-[35px] h-[35px] lg:w-[48px] lg:h-[48px] rounded-[100px] flex justify-center items-center">
                                     <GoArrowUpRight className="text-white text-xl" />

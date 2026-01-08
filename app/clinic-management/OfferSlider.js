@@ -15,6 +15,20 @@ import offer_slider_01 from "../../assets/imagesource/offer_slider_01.png";
 import offer_slider_02 from "../../assets/imagesource/offer_slider_02.png";
 import offer_slider_03 from "../../assets/imagesource/offer_slider_03.png";
 
+import offer_slider_04 from "../../assets/imagesource/offer_slider_04.png";
+import offer_slider_05 from "../../assets/imagesource/offer_slider_05.png";
+import offer_slider_06 from "../../assets/imagesource/offer_slider_06.png";
+import offer_slider_07 from "../../assets/imagesource/offer_slider_07.png";
+import offer_slider_08 from "../../assets/imagesource/offer_slider_08.png";
+import offer_slider_09 from "../../assets/imagesource/offer_slider_09.png";
+import offer_slider_10 from "../../assets/imagesource/offer_slider_10.png";
+import offer_slider_11 from "../../assets/imagesource/offer_slider_11.png";
+import offer_slider_12 from "../../assets/imagesource/offer_slider_12.png";
+import offer_slider_13 from "../../assets/imagesource/offer_slider_13.png";
+import offer_slider_14 from "../../assets/imagesource/offer_slider_14.png";
+import offer_slider_15 from "../../assets/imagesource/offer_slider_15.png";
+import offer_slider_16 from "../../assets/imagesource/offer_slider_16.png";
+
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -108,7 +122,7 @@ const OfferSlider = () => {
             </div>
             <div className='px-2 p-0'>
                 <div className='offer_slider_wrap'>
-                    <Image src={offer_slider_01} alt='offer_slider_01' className='mb-0' />
+                    <Image src={offer_slider_04} alt='offer_slider_04' className='mb-0' />
                     <div className='offer_slider_content'>
                         <div className='offer_slider_content_box'>
                             <h3>Queue Management System</h3>
@@ -121,7 +135,7 @@ const OfferSlider = () => {
             </div>
             <div className='px-2 p-0'>
                 <div className='offer_slider_wrap'>
-                    <Image src={offer_slider_02} alt='offer_slider_02' className='mb-0' />
+                    <Image src={offer_slider_05} alt='offer_slider_05' className='mb-0' />
                     <div className='offer_slider_content'>
                         <div className='offer_slider_content_box'>
                             <h3>Nursing Notes</h3>
@@ -135,7 +149,7 @@ const OfferSlider = () => {
             </div>
             <div className='px-2 p-0'>
                 <div className='offer_slider_wrap'>
-                    <Image src={offer_slider_03} alt='offer_slider_03' className='mb-0' />
+                    <Image src={offer_slider_06} alt='offer_slider_06' className='mb-0' />
                     <div className='offer_slider_content'>
                         <div className='offer_slider_content_box'>
                             <h3>Doctor Consultation</h3>
@@ -152,7 +166,7 @@ const OfferSlider = () => {
 
             <div className='px-2 p-0'>
                 <div className='offer_slider_wrap'>
-                    <Image src={offer_slider_01} alt='offer_slider_01' className='mb-0' />
+                    <Image src={offer_slider_07} alt='offer_slider_07' className='mb-0' />
                     <div className='offer_slider_content'>
                         <div className='offer_slider_content_box'>
                             <h3>Digital Prescription</h3>
@@ -168,7 +182,7 @@ const OfferSlider = () => {
             </div>
             <div className='px-2 p-0'>
                 <div className='offer_slider_wrap'>
-                    <Image src={offer_slider_02} alt='offer_slider_02' className='mb-0' />
+                    <Image src={offer_slider_08} alt='offer_slider_08' className='mb-0' />
                     <div className='offer_slider_content'>
                         <div className='offer_slider_content_box'>
                             <h3>Telemedicine</h3>
@@ -181,7 +195,7 @@ const OfferSlider = () => {
             </div>
             <div className='px-2 p-0'>
                 <div className='offer_slider_wrap'>
-                    <Image src={offer_slider_03} alt='offer_slider_03' className='mb-0' />
+                    <Image src={offer_slider_09} alt='offer_slider_09' className='mb-0' />
                     <div className='offer_slider_content'>
                         <div className='offer_slider_content_box'>
                             <h3>EHR, EMR</h3>
@@ -196,7 +210,7 @@ const OfferSlider = () => {
 
             <div className='px-2 p-0'>
                 <div className='offer_slider_wrap'>
-                    <Image src={offer_slider_01} alt='offer_slider_01' className='mb-0' />
+                    <Image src={offer_slider_10} alt='offer_slider_10' className='mb-0' />
                     <div className='offer_slider_content'>
                         <div className='offer_slider_content_box'>
                             <h3>Doctor Scheduling, vacation and slot switching</h3>
@@ -210,7 +224,7 @@ const OfferSlider = () => {
             </div>
             <div className='px-2 p-0'>
                 <div className='offer_slider_wrap'>
-                    <Image src={offer_slider_02} alt='offer_slider_02' className='mb-0' />
+                    <Image src={offer_slider_11} alt='offer_slider_11' className='mb-0' />
                     <div className='offer_slider_content'>
                         <div className='offer_slider_content_box'>
                             <h3>Billing & Reports</h3>
@@ -224,7 +238,7 @@ const OfferSlider = () => {
             </div>
             <div className='px-2 p-0'>
                 <div className='offer_slider_wrap'>
-                    <Image src={offer_slider_03} alt='offer_slider_03' className='mb-0' />
+                    <Image src={offer_slider_12} alt='offer_slider_12' className='mb-0' />
                     <div className='offer_slider_content'>
                         <div className='offer_slider_content_box'>
                             <h3>Finance</h3>
@@ -241,7 +255,7 @@ const OfferSlider = () => {
 
             <div className='px-2 p-0'>
                 <div className='offer_slider_wrap'>
-                    <Image src={offer_slider_01} alt='offer_slider_01' className='mb-0' />
+                    <Image src={offer_slider_13} alt='offer_slider_13' className='mb-0' />
                     <div className='offer_slider_content'>
                         <div className='offer_slider_content_box'>
                             <h3>Follow up reminder</h3>
@@ -254,7 +268,7 @@ const OfferSlider = () => {
             </div>
             <div className='px-2 p-0'>
                 <div className='offer_slider_wrap'>
-                    <Image src={offer_slider_02} alt='offer_slider_02' className='mb-0' />
+                    <Image src={offer_slider_14} alt='offer_slider_14' className='mb-0' />
                     <div className='offer_slider_content'>
                         <div className='offer_slider_content_box'>
                             <h3>Prescribed Lab test, imaging, and medicines auto notification</h3>
@@ -267,7 +281,7 @@ const OfferSlider = () => {
             </div>
             <div className='px-2 p-0'>
                 <div className='offer_slider_wrap'>
-                    <Image src={offer_slider_03} alt='offer_slider_03' className='mb-0' />
+                    <Image src={offer_slider_15} alt='offer_slider_15' className='mb-0' />
                     <div className='offer_slider_content'>
                         <div className='offer_slider_content_box'>
                             <h3>SMS, e-Mail, other communication channel integration</h3>
@@ -283,7 +297,7 @@ const OfferSlider = () => {
 
             <div className='px-2 p-0'>
                 <div className='offer_slider_wrap'>
-                    <Image src={offer_slider_01} alt='offer_slider_01' className='mb-0' />
+                    <Image src={offer_slider_16} alt='offer_slider_16' className='mb-0' />
                     <div className='offer_slider_content'>
                         <div className='offer_slider_content_box'>
                             <h3>Role based access (RBAC)</h3>

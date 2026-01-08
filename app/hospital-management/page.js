@@ -62,7 +62,7 @@ const page = () => {
                                 in different geo-location. An all-in-one 360-degree solution for OP management, and IP management (ADT process) including doctor 
                                 discovery, appointment scheduling, check-in, billing, EHR, and prescription management with a fully functional mobile application.
                             </p>
-                            <Link className="inline-flex items-center gap-10 text-black bg-[#ffffff] font-medium text-xs lg:text-base rounded-[35px] px-3 py-1 pr-1 lg:py-1 pl-4 border-2 border-[#f2f2f2] hover:bg-white hover:text-[#1955ef]" href="/" passHref>
+                            <Link className="inline-flex items-center gap-10 text-black bg-[#ffffff] font-medium text-xs lg:text-base rounded-[35px] px-3 py-1 pr-1 lg:py-1 pl-4 border-2 border-[#f2f2f2] hover:bg-white hover:text-[#1955ef]" href="/#request_a_demo" passHref>
                                 Schedule a Demo
                                 <div className="bg-[#1955EF] w-[35px] h-[35px] lg:w-[48px] lg:h-[48px] rounded-[100px] flex justify-center items-center">
                                     <GoArrowUpRight className="text-white text-xl" />

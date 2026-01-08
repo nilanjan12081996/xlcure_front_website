@@ -167,6 +167,60 @@ const ProductsSlider = () => {
                 </div>
             </div>
 
+            <div className='px-2 py-2'>
+                <div className="bg-white border border-[#DAD9D9] rounded-xl p-6 text-left h-full">
+                    <div className="w-[50px] h-[50px] bg-[#EFFFDC] rounded-[10px] flex justify-center items-center">
+                    <BiClinic className="text-[#2A5C0B] text-2xl" />
+                    </div>
+                    <h3 className="font-semibold text-black mt-5 text-[18px]">Billing & Inventory Management</h3>
+                    <p className="text-[15px] text-[#464646] mt-3 min-h-[100px]">
+                    ProfitPlus is a powerful yet easy-to-use billing software and inventory management system designed for retail shops...
+                    </p>
+                    <Link className="inline-flex mt-3 items-center gap-10 text-black bg-[#ffffff] font-medium text-xs lg:text-sm rounded-[35px] px-3 py-2 pr-1 lg:py-1 pl-4 border-2 border-[#f2f2f2] hover:bg-white hover:text-[#1955ef]" href="/billing-inventory-management" passHref>
+                    Read More
+                    <div className="bg-[#1955EF] w-[38px] h-[38px] rounded-[100px] flex justify-center items-center">
+                        <GoArrowUpRight className="text-white text-xl" />
+                    </div>
+                    </Link>
+                </div>
+            </div>
+
+            <div className='px-2 py-2'>
+                <div className="bg-white border border-[#DAD9D9] rounded-xl p-6 text-left h-full">
+                    <div className="w-[50px] h-[50px] bg-[#EFFFDC] rounded-[10px] flex justify-center items-center">
+                    <BiClinic className="text-[#2A5C0B] text-2xl" />
+                    </div>
+                    <h3 className="font-semibold text-black mt-5 text-[18px]">CRM</h3>
+                    <p className="text-[15px] text-[#464646] mt-3 min-h-[100px]">
+                    Our CRM system brings everything your business needs into one clean, easy-to-use platform from logging...
+                    </p>
+                    <Link className="inline-flex mt-3 items-center gap-10 text-black bg-[#ffffff] font-medium text-xs lg:text-sm rounded-[35px] px-3 py-2 pr-1 lg:py-1 pl-4 border-2 border-[#f2f2f2] hover:bg-white hover:text-[#1955ef]" href="/crm" passHref>
+                    Read More
+                    <div className="bg-[#1955EF] w-[38px] h-[38px] rounded-[100px] flex justify-center items-center">
+                        <GoArrowUpRight className="text-white text-xl" />
+                    </div>
+                    </Link>
+                </div>
+            </div>
+
+            <div className='px-2 py-2'>
+                <div className="bg-white border border-[#DAD9D9] rounded-xl p-6 text-left h-full">
+                    <div className="w-[50px] h-[50px] bg-[#EFFFDC] rounded-[10px] flex justify-center items-center">
+                    <BiClinic className="text-[#2A5C0B] text-2xl" />
+                    </div>
+                    <h3 className="font-semibold text-black mt-5 text-[18px]">QMS</h3>
+                    <p className="text-[15px] text-[#464646] mt-3 min-h-[100px]">
+                    Our Queue Management System (QMS) streamlines how customers or patients move through your service process.
+                    </p>
+                    <Link className="inline-flex mt-3 items-center gap-10 text-black bg-[#ffffff] font-medium text-xs lg:text-sm rounded-[35px] px-3 py-2 pr-1 lg:py-1 pl-4 border-2 border-[#f2f2f2] hover:bg-white hover:text-[#1955ef]" href="/qms" passHref>
+                    Read More
+                    <div className="bg-[#1955EF] w-[38px] h-[38px] rounded-[100px] flex justify-center items-center">
+                        <GoArrowUpRight className="text-white text-xl" />
+                    </div>
+                    </Link>
+                </div>
+            </div>
+
         </Slider>
     </div>
   )
