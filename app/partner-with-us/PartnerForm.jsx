@@ -128,13 +128,23 @@ import captcha_img from "../../assets/imagesource/captcha_img.png";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getCountry, partnerWithUs } from "../Reducer/PartnerSlice";
 import { toast } from "react-toastify";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const PartnerForm = () => {
   const dispatch = useDispatch();
   const { loading, countryList } = useSelector((state) => state.partner);
+  const recaptchaRef = useRef(null);
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+  const handleCaptchaChange = (value) => {
+    if (value) {
+      setIsCaptchaVerified(true);
+    } else {
+      setIsCaptchaVerified(false);
+    }
+  };
 
   useEffect(() => {
     dispatch(getCountry());
@@ -148,9 +158,18 @@ const PartnerForm = () => {
   } = useForm();
 
   const onSubmit = (data) => {
+    if (!isCaptchaVerified) {
+      toast.error("Please complete the Captcha");
+      return;
+    }
     dispatch(partnerWithUs(data)).then((res) => {
       if (res?.payload?.status_code === 200) {
         toast.success(res?.payload?.message);
+        reset();
+        setIsCaptchaVerified(false);
+        if (recaptchaRef.current) {
+          recaptchaRef.current.reset();
+        }
       }
     });
   };
@@ -303,7 +322,12 @@ const PartnerForm = () => {
             </div>
 
             <div className="w-6/12 mt-8">
-              <Image src={captcha_img} alt="captcha_img" className="w-9/12" />
+              {/* <Image src={captcha_img} alt="captcha_img" className="w-9/12" /> */}
+              <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+              onChange={handleCaptchaChange}
+            />
             </div>
           </div>
 
@@ -311,8 +335,8 @@ const PartnerForm = () => {
           <div className="form_area submit_btn">
             <Button
               type="submit"
-              disabled={loading}
-              className={loading ? "opacity-60 cursor-not-allowed" : ""}
+              disabled={loading||!isCaptchaVerified}
+              className={(loading || !isCaptchaVerified)? "opacity-60 cursor-not-allowed" : ""}
             >
               {loading ? "Waiting" : "Request Partner"}
             </Button>

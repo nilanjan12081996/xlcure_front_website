@@ -136,7 +136,7 @@ import {
   Select,
 } from "flowbite-react";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -146,13 +146,22 @@ import captcha_img from "../assets/imagesource/captcha_img.png";
 import { getCountry } from "./Reducer/PartnerSlice";
 import { demoRequest } from "./Reducer/DemoSlice";
 import { toast, ToastContainer } from "react-toastify";
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 const DemoForm = () => {
   const dispatch = useDispatch();
   const { countryList } = useSelector((state) => state.partner);
-  const { loading } = useSelector((state) => state.demo); 
-
+  const { loading } = useSelector((state) => state.demo);
+  const recaptchaRef = useRef(null);
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false); 
+  const handleCaptchaChange = (value) => {
+    if (value) {
+      setIsCaptchaVerified(true);
+    } else {
+      setIsCaptchaVerified(false);
+    }
+  };
   const {
     register,
     handleSubmit,
@@ -166,12 +175,20 @@ const DemoForm = () => {
   }, [dispatch]);
 
   const onSubmit = (data) => {
+        if (!isCaptchaVerified) {
+      toast.error("Please complete the Captcha");
+      return;
+    }
     dispatch(demoRequest(data)).then((res)=>{
       console.log(res,"res");
       
         if(res?.payload?.status_code===200){
              toast.success(res?.payload?.message)
           reset()
+           setIsCaptchaVerified(false);
+        if (recaptchaRef.current) {
+          recaptchaRef.current.reset();
+        }
          
         }
     })
@@ -316,14 +333,19 @@ const DemoForm = () => {
 
 
               <div className="mt-2">
-                <Image src={captcha_img} alt="captcha" className="w-9/12" />
+                {/* <Image src={captcha_img} alt="captcha" className="w-9/12" /> */}
+                     <ReCAPTCHA
+                              ref={recaptchaRef}
+                              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                              onChange={handleCaptchaChange}
+                            />
               </div>
             </div>
           </div>
 
           {/* Submit */}
           <div className="form_area submit_btn">
-          <Button type="submit" disabled={loading}  className={loading ? "opacity-60 cursor-not-allowed" : ""}>
+          <Button type="submit" disabled={loading ||!isCaptchaVerified}  className={(loading || !isCaptchaVerified) ? "opacity-60 cursor-not-allowed" : ""}>
             {loading ? "Waiting..." : "Request a Demo"}
           </Button>
           </div>
